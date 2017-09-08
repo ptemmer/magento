@@ -1,0 +1,256 @@
+{
+  "name": "magento",
+  "description": "Installs/Configures magento",
+  "long_description": "magento Cookbook\n================\nTODO: Enter the cookbook description here.\n\ne.g.\nThis cookbook makes your favorite breakfast sandwich.\n\nRequirements\n------------\nTODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.\n\ne.g.\n#### packages\n- `toaster` - magento needs toaster to brown your bagel.\n\nAttributes\n----------\nTODO: List your cookbook attributes here.\n\ne.g.\n#### magento::default\n<table>\n  <tr>\n    <th>Key</th>\n    <th>Type</th>\n    <th>Description</th>\n    <th>Default</th>\n  </tr>\n  <tr>\n    <td><tt>['magento']['bacon']</tt></td>\n    <td>Boolean</td>\n    <td>whether to include bacon</td>\n    <td><tt>true</tt></td>\n  </tr>\n</table>\n\nUsage\n-----\n#### magento::default\nTODO: Write usage instructions for each cookbook.\n\ne.g.\nJust include `magento` in your node's `run_list`:\n\n```json\n{\n  \"name\":\"my_node\",\n  \"run_list\": [\n    \"recipe[magento]\"\n  ]\n}\n```\n\nContributing\n------------\nTODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.\n\ne.g.\n1. Fork the repository on Github\n2. Create a named feature branch (like `add_component_x`)\n3. Write your change\n4. Write tests for your change (if applicable)\n5. Run the tests, ensuring they all pass\n6. Submit a Pull Request using Github\n\nLicense and Authors\n-------------------\nAuthors: TODO: List authors\n",
+  "maintainer": "Ingram Micro",
+  "maintainer_email": "imco@ingrammicro.com",
+  "license": "All rights reserved",
+  "platforms": {
+    "ubuntu": ">= 0.0.0",
+    "debian": ">= 0.0.0",
+    "centos": ">= 0.0.0",
+    "redhat": ">= 0.0.0",
+    "scientific": ">= 0.0.0",
+    "windows": ">= 0.0.0"
+  },
+  "dependencies": {
+    "docker": ">= 0.0.0"
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+    "magento/db/host": {
+      "display_name": "host",
+      "description": "Database host",
+      "default": "mysql",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/db/database": {
+      "display_name": "database",
+      "description": "Database Name",
+      "default": "magento",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/db/username": {
+      "display_name": "username",
+      "description": "Database Username",
+      "default": "magentouser",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/db/sample_data": {
+      "display_name": "sample_data",
+      "description": "Database Sample Data",
+      "default": "false",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/dir": {
+      "display_name": "dir",
+      "description": "Magento install dir",
+      "default": "/var/www/magento",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "mysql/dir": {
+      "display_name": "dir",
+      "description": "Mysql install dir",
+      "default": "/var/lib/mysql",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "mysql/root_password": {
+      "display_name": "root_password",
+      "description": "Mysql root password",
+      "default": "mysqlmagentopassword",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/locale": {
+      "display_name": "locale",
+      "description": "Magento locale",
+      "default": "en_US",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/timezone": {
+      "display_name": "timezone",
+      "description": "Magento timezone",
+      "default": "America/Los_Angeles",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/version": {
+      "display_name": "version",
+      "description": "Magento Version",
+      "default": "latest",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/user/firstname": {
+      "display_name": "firstname",
+      "description": "Magento Admin User Firstname",
+      "default": "admin",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/user/lastname": {
+      "display_name": "lastname",
+      "description": "Magento Admin User Lastname",
+      "default": "MyStore",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/user/username": {
+      "display_name": "username",
+      "description": "Magento Admin Username",
+      "default": "admin",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/user/password": {
+      "display_name": "password",
+      "description": "Magento Admin Password",
+      "default": "magentorocks1",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    },
+    "magento/user/email": {
+      "display_name": "email",
+      "description": "Magento email",
+      "default": "admin@admin.com",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional",
+      "recipes": [
+
+      ]
+    }
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+    "magento": "Installs and configures magento"
+  },
+  "version": "0.6.7",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false
+}
